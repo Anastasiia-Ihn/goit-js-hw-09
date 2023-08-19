@@ -38,7 +38,7 @@ flatpickr("#datetime-picker", {
         } else if (time > 0) {
           convertMs(time)
           //  форматування мілісек в дн:год:хв:сек
-          console.log(convertMs(time));
+          console.log(convertMs(time).days);
           
            dataDays.textContent = addLeadingZero(convertMs(time).days);
           dataHours.textContent = addLeadingZero(convertMs(time).hours);
@@ -76,5 +76,5 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 function addLeadingZero(value) {
- value.padStart(2, '0')
+ return value.padStart(2, '0')
 }

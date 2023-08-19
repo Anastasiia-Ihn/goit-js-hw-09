@@ -38,11 +38,12 @@ flatpickr("#datetime-picker", {
         } else if (time > 0) {
           convertMs(time)
           //  форматування мілісек в дн:год:хв:сек
-          //      
-           dataDays.textContent = addLeadingZero(convertMs(time));
-          dataHours.textContent = addLeadingZero(convertMs(time));
-          dataMinutes.textContent = addLeadingZero(convertMs(time));
-          dataSeconds.textContent =addLeadingZero(convertMs(time));
+          console.log(convertMs(time));
+          
+           dataDays.textContent = addLeadingZero(convertMs(time).days);
+          dataHours.textContent = addLeadingZero(convertMs(time).hours);
+          dataMinutes.textContent = addLeadingZero(convertMs(time).minutes);
+          dataSeconds.textContent =addLeadingZero(convertMs(time).seconds);
         } else {
           dataDays.textContent = '00';
           dataHours.textContent = '00';
@@ -55,7 +56,6 @@ flatpickr("#datetime-picker", {
   } ,
 } )  
 
-// padStart()
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time

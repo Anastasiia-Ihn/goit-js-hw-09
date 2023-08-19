@@ -76,5 +76,5 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 function addLeadingZero(value) {
- return value.padStart(2, '0')
+   return value.toString().padStart(2, "0");
 }

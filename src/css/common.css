@@ -16,3 +16,20 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+  width: 385px;
+  height: 180px;
+  padding-top: 40px;
+  padding-left: 25px;
+  margin-top: 50px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  color: #0a1198;
+}
+
+.value {
+  font-size: 40px;
+  font-weight: 900;
+}

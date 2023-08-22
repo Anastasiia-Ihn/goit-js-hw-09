@@ -7,6 +7,11 @@ formEl.addEventListener('submit', handlercreatePromises)
 
 function handlercreatePromises(evt) {
   evt.preventDefault();
+
+//  let delay = Number(evt.currentTarget.elements.delay.value);
+//   let step =Number(evt.currentTarget.elements.step.value);
+//   let amount = Number(evt.currentTarget.elements.amount.value);
+
   let delay = Number(delayEl.value);
   let step =Number(stepEl.value);
   let amount = Number(amountEl.value);
@@ -20,8 +25,8 @@ delay += step;
 
 function createPromise(position, delay) {
   const promise = new Promise((res, rej) => {
-    const shouldResolve = Math.random() > 0.3;
-    setTimeout(() => {
+       setTimeout(() => {
+ const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
         res({ position, delay })
       } else {
